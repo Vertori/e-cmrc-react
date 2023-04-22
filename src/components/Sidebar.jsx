@@ -8,7 +8,7 @@ import { CartContext } from "../context/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, clearCart, itemAmount } = useContext(CartContext);
+  const { cart, clearCart, itemAmount, total } = useContext(CartContext);
   return (
     <div
       className={`${
@@ -26,7 +26,7 @@ const Sidebar = () => {
           <IoMdArrowForward className="text-2xl" />
         </div>
       </div>
-      <div>
+      <div className="flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b ">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
@@ -35,7 +35,7 @@ const Sidebar = () => {
         <div className="flex w-full justify-between items-center">
           {/* total */}
           <div className="uppercase font-semibold ">
-            <span className="mr-2 ">Total:</span>1000 zł
+            <span className="mr-2 ">Total:</span>{parseFloat(total).toFixed(2)} zł
           </div>
           {/* clear cart icon*/}
           <div
