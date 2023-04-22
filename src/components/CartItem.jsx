@@ -35,7 +35,7 @@ const CartItem = ({ item }) => {
             {/* quantity */}
             <div className="flex flex-1 max-w-[100px] items-center h-full border text-primary font-medium">
               {/* minus icon */}
-              <div onClick={() => decreaseAmount(id)} className="flex flex-1 justify-center items-center cursor-pointer">
+              <div onClick={() => decreaseAmount(id)} className="flex flex-1 justify-center items-center cursor-pointer h-full">
                 <IoMdRemove />
               </div>
               {/* amount */}
@@ -43,7 +43,7 @@ const CartItem = ({ item }) => {
                 {amount}
               </div>
               {/* plus icon */}
-              <div onClick={() => increaseAmount(id)} className=" flex flex-1 h-full justify-center items-center cursor-pointer">
+              <div onClick={() => increaseAmount(id)} className=" flex flex-1  justify-center items-center cursor-pointer h-full">
                 <IoMdAdd />
               </div>
             </div>
