@@ -27,7 +27,7 @@ theme: {
       secondary: '#F5E6E0',
     },
     backgroundImage: {
-      hero: "url('./images/bg_hero.svg')",
+      hero: "url('./assets/hero-bg.jpg')",
     },
   },
 },
