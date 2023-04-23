@@ -9,8 +9,8 @@ const Product = ({ product }) => {
   const {addToCart} = useContext(CartContext)
 
   return (
-    <div>
-      <div className='border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition '>
+    <div className='shadow-lg border border-gray-100 rounded-sm'>
+      <div className='h-[300px] mb-4 relative overflow-hidden group transition'>
         <div className='w-full h-full flex justify-center items-center'>
           {/* image */}
           <div className='w-[200px] mx-auto flex justify-center items-center'>
@@ -28,12 +28,12 @@ const Product = ({ product }) => {
         </div>
       </div>
       {/* category, title, price */}
-      <div>
+      <div className='px-2 py-1.5 text-center md:text-left'>
         <div className='text-sm capitalize text-gray-500 mb-1'>{category}</div>
         <Link to={`/product/${id}`}>
-        <h2 className='font-semibold mb-1'>{title}</h2>
+        <h2 className='font-medium mb-1'>{title}</h2>
         </Link>
-        <div className='font-semibold'>{price} zł</div>
+        <div className='font-semibold text-red-400'>{price} zł</div>
       </div>
     </div>
   )

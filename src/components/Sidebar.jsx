@@ -12,8 +12,8 @@ const Sidebar = () => {
   return (
     <div
       className={`${
-        isOpen ? "right-0" : "-right-full"
-      } w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] lg:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px]`}
+        isOpen ? "right-0 shadow-2xl" : "-right-full"
+      } w-full bg-white fixed top-0 h-full md:w-[35vw] lg:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px]`}
     >
       <div className="flex items-center justify-between py-6 border-b">
         <div className="uppercase text-sm font-semibold ">
@@ -45,6 +45,8 @@ const Sidebar = () => {
             <FiTrash2 />
           </div>
         </div>
+        <Link to="/" className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium">View Cart</Link>
+        <Link to="/" className="bg-primary flex p-4 justify-center items-center text-white w-full font-medium">Checkout</Link>
       </div>
     </div>
   );
