@@ -16,7 +16,7 @@ const Footer = () => {
           {/* form */}
           <form className='mt-6'>
             <div className='relative max-w-lg'>
-              <label for="email" className='sr-only'>Email</label>
+              <label htmlFor="email" className='sr-only'>Email</label>
               {/* input */}
               <input type="email" placeholder="Your e-mail..." className='w-full border border-gray-300 rounded-full bg-gray-100 p-4 pe-32 text-sm font-medium focus:outline-none'/>
               {/* subscribe button */}
