@@ -8,7 +8,9 @@ const Home = () => {
   // getting only men's and women's clothing
   const filteredProducts = products.filter((item) => {
     return (
-      item.category === "men's clothing" || item.category === "women's clothing"
+      item.category === "men's clothing" ||
+      item.category === "women's clothing" ||
+      item.category === "jewelery"
     );
   });
 

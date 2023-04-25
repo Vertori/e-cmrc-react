@@ -50,11 +50,12 @@ const ProductDetails = () => {
             <BiChevronRight />
           </li>
           <li>
-            {category === "men's clothing" ? (
+          {/* {category === "men's clothing" ? (
               <Link to="/men">{category}</Link>
             ) : (
               <Link to="/women">{category}</Link>
-            )}
+            )} */}
+            {category === "men's clothing" ? ( <Link to="/men">{category}</Link> ) : category === "women's clothing" ? ( <Link to="/women">{category}</Link> ) : category === "jewelery" ? ( <Link to="/jewelery">{category}</Link> ) : <span>{category}</span>}
           </li>
           <li>
             <BiChevronRight />
@@ -115,7 +116,7 @@ const ProductDetails = () => {
                 },
                 1440: {
                   slidesPerView: 4,
-                  slidesPerGroup: 2,
+                slidesPerGroup: 2,
                 },
               }}
             >

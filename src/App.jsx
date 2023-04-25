@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import WomensClothing from "./pages/WomensClothing";
 import MensClothing from "./pages/MensClothing";
 import ScrollToTop from "./components/ScrollToTop";
+import Jewelery from "./pages/Jewelery";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/women" element={<WomensClothing />} />
             <Route path="/men" element={<MensClothing />} />
+            <Route path="/jewelery" element={<Jewelery />}/>
           </Routes>
           <Sidebar />
           <Footer />

@@ -6,16 +6,16 @@ import { BiChevronRight } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const MensClothing = () => {
+const Jewelery = () => {
   const { products } = useContext(ProductContext);
 
-  const filteredMensProducts = products.filter((item) => {
-    return item.category === "men's clothing";
+  const filteredJeweleryProducts = products.filter((item) => {
+    return item.category === "jewelery";
   });
 
   return (
     <div>
-      <CategorizedHero category="Men's clothing" />
+      <CategorizedHero category="Jewelery" />
       <section className="py-16 border-b ">
         <div className="container mx-auto">
           {/* location nav */}
@@ -30,13 +30,13 @@ const MensClothing = () => {
                 <li>
                   <BiChevronRight />
                 </li>
-                <li>Men's clothing</li>
+                <li>Jewelery</li>
               </ol>
             </nav>
           </div>
           {/* displayed products */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] max-w-sm md:max-w-none mx-auto md:mx-0">
-            {filteredMensProducts.map((product) => {
+            {filteredJeweleryProducts.map((product) => {
               return <Product product={product} key={product.id} />;
             })}
           </div>
@@ -46,4 +46,4 @@ const MensClothing = () => {
   );
 };
 
-export default MensClothing;
+export default Jewelery;

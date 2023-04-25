@@ -10,3 +10,7 @@ export default function ScrollToTop() {
 
   return null;
 }
+
+window.onunload = function () {
+  window.scrollTo(0, 0);
+};
