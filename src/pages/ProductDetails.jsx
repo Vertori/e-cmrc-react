@@ -5,6 +5,12 @@ import { ProductContext } from "../context/ProductContext";
 import ClipLoader from "react-spinners/ClipLoader";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiChevronRight } from "react-icons/bi";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import Product from "../components/Product";
+import SliderCard from "../components/SliderCard";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -23,10 +29,15 @@ const ProductDetails = () => {
     );
   }
 
+  const otherProducts = products.filter((item) => {
+    return item.id !== Number(id) && item.category !== "electronics";
+  });
+  console.log(otherProducts);
+
   const { title, price, description, image, category } = product;
 
   return (
-    <div className="flex flex-col pt-32 pb-12 lg:py-32 lg:h-screen gap-28">
+    <div className="flex flex-col pt-32 pb-12 lg:py-32  gap-28">
       {/* location nav */}
       <nav className="mx-auto px-4">
         <ol className="flex items-center gap-1 text-sm text-gray-600">
@@ -52,7 +63,7 @@ const ProductDetails = () => {
         </ol>
       </nav>
       {/* product section */}
-      <section className=" flex items-center">
+      <section className="flex items-center">
         <div className="container mx-auto">
           {/* image and text wrapper */}
           <div className="flex flex-col lg:flex-row items-center">
@@ -80,6 +91,44 @@ const ProductDetails = () => {
                 Add to cart
               </button>
             </div>
+          </div>
+          {/* SLIDER */}
+          <div className="mt-32">
+            <div className="text-xl mb-4 text-center md:text-start">
+              <span>Check other Products</span>
+            </div>
+            <Swiper
+              modules={[Navigation]}
+              loop={true}
+              spaceBetween={10}
+              slidesPerView={1}
+              slidesPerGroup={1}
+              navigation={true}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 2,
+                },
+                1440: {
+                  slidesPerView: 4,
+                  slidesPerGroup: 2,
+                },
+              }}
+            >
+              <div className="flex">
+                {otherProducts.map((product) => {
+                  return (
+                    <SwiperSlide key={product.title}>
+                      <SliderCard product={product} key={product.id} />
+                    </SwiperSlide>
+                  );
+                })}
+              </div>
+            </Swiper>
           </div>
         </div>
       </section>
