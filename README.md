@@ -7,7 +7,7 @@
   <h1 align="center">E-commerce Website</h1>
 
   <p align="center">
-    <a href=""><strong>Live Website »</strong></a>
+    <a href="https://ecmrc-react-rf.netlify.app/"><strong>Live Website »</strong></a>
     <br/>
     <br/>
   </p>
@@ -40,7 +40,10 @@ E-commerce website built using React JS and designed using Tailwind CSS. Website
 <img src="readmeAssets/ecommerceScreen2.png"/>
 <img src="readmeAssets/ecommerceScreen3.png"/>
 <img src="readmeAssets/ecommerceScreen4.png"/>
-<img src="readmeAssets/ecommerceMobileScreen1.png"/>
+<img src="readmeAssets/ecommerceScreenMob1.png"/>
+<img src="readmeAssets/ecommerceScreenMob2.png"/>
+<img src="readmeAssets/ecommerceScreenMob3.png"/>
+<img src="readmeAssets/ecommerceScreenMob4.png"/>
 
 ## Tech Stack
 
@@ -58,7 +61,7 @@ E-commerce website built using React JS and designed using Tailwind CSS. Website
 To get started with this project, simply clone the repository:
 
 ```bash
-git clone https://github.com/Vertori/tsl-cln-react.git
+git clone https://github.com/Vertori/e-cmrc-react.git
 ```
 
 Use the package manager [npm](https://www.npmjs.com/) to install the dependencies.
